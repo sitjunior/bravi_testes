@@ -1,0 +1,182 @@
+.footer{    
+    background-color: $white-color;
+    line-height: $line-height;
+    
+    nav > ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-weight: normal;
+        
+        a:not(.btn){
+            color: $dark-gray;
+            display: block;
+            margin-bottom: 3px;
+            &:hover,
+            &:focus{
+                color: $default-states-color;
+            }
+        }
+    }
+    .social-area{
+        padding: 15px 0;
+        h5{
+            padding-bottom: 15px;
+        }
+    }
+    .social-area > a:not(.btn){
+       color: $dark-gray;
+       display: inline-block;
+       vertical-align: top;
+       padding: $padding-social-a;
+       font-size: $font-size-large-navbar;
+       font-weight: normal;
+       line-height: $line-height;
+       text-align: center;
+       &:hover,
+       &:focus{
+           color: $default-states-color;
+       }
+    }
+    .copyright{
+        width:100%;
+        color: $default-states-color;
+        margin: 15px 0;
+        line-height: 20px;
+    }
+    hr{
+        border-color: $medium-gray;
+    }
+    .title{
+        color: $default-states-color;
+    }
+}
+
+.footer-default{
+    background-color: $smoke-bg;
+}
+
+.footer:not(.footer-big){
+    nav > ul{
+       font-size: $font-size-base;
+       li{
+            margin-left: 20px;
+            float: left;
+        }
+        a{
+            padding: 10px 0px;
+            margin: 10px 10px 10px 0px;
+        }
+    }
+}
+
+.hangar-logo {
+    margin-left:5px;
+}
+.login-page {
+    display:flex;
+    height: 100vh;
+    .background {
+        flex: 1 1 auto;
+        background-image:url(../img/bg.jpg);
+        background-repeat: no-repeat;
+        background-position-y: center;
+        background-position-x: center;
+        background-size: cover;
+        position:relative;
+    }
+    .logo-container {
+        position: absolute!important;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+    }
+    .logo {
+        position: relative;
+        width:120px;
+        height:120px;
+        background-color: #fff;
+        border-radius: 50%;
+    }
+    .logo img {
+        margin-top:25%;
+        margin-left:25%;
+    }
+    .form {
+        min-width:320px;
+        display: block;
+        height:100%;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        padding:80px 40px 0 40px;
+        overflow: hidden;
+        position:relative;
+    }
+    .form .title {
+        margin:0 0 40px 0;
+    }
+}
+@media (max-width:991px) {
+    .login-page .logo-container {
+        display:none;
+    }
+}
+.footer-login {
+    font-size: 12px!important;
+    color: grey;
+    text-align: center;
+    position: absolute;
+    bottom:20px;
+    width:calc(100% - 80px);
+
+    .hangar {
+        margin-top:15px;
+    }
+}
+.footer-admin {
+    font-size: 12px !important;
+    color: grey;
+
+    .hangar {
+        float:right;
+    }
+}
+.hangar_link-logo {
+    filter: grayscale(100%);
+}
+.hangar_text {
+    right: 50%;
+    z-index: 1;
+    position: absolute;
+    height: 22px;
+    margin-top: -20px;
+    margin-right: -60px;
+    width: 120px;
+    background-color: #FFF;
+    display: block;
+}
+.hangar_link:hover + div {
+    background-color:transparent;
+    height:50px;
+}
+.hangar_link-logo:hover {
+    filter:none;
+}
+@media (max-width:767px) {
+    .footer-admin {
+        text-align: center;
+    
+        .hangar {
+            float:unset;
+            margin-top:15px;
+        }
+    }
+}
+@media (min-width:768px) {
+    .footer-admin .hangar_text {
+        right:unset;
+    }
+}
